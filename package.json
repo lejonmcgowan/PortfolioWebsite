@@ -1,0 +1,35 @@
+{
+  "name": "express_practice",
+  "version": "1.0.0",
+  "description": "I need to learn express; let's do it w/ video!",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon frontServer",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node frontServer",
+    "start-server": "npm run start && npm run listen",
+    "debug": "nodemon --debug frontServer.js",
+    "debug-start": "node-inspector"
+  },
+  "keywords": [
+    "express",
+    "practice"
+  ],
+  "author": "LeJon McGowan",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "express": "^4.14.0",
+    "node-inspector": "^0.12.8",
+    "nodemon": "^1.10.2",
+    "pug": "^2.0.0-beta6"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.4",
+    "jquery": "^3.1.0",
+    "jsdom": "^9.5.0",
+    "pug": "^2.0.0-beta6",
+    "tether": "^1.3.7"
+  }
+}

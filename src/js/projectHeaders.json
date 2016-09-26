@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Attack Vector",
+    "imagePath": "assets/images/node.png",
+    "description": "Hack into the Mainframe! Race to the Finish!"
+  },
+  {
+    "title": "Baaalrog",
+    "imagePath": "assets/images/node.png",
+    "description": "Trow Goats Everywhere!"
+  },
+  {
+    "title": "L-System Tree",
+    "imagePath": "assets/images/node.png",
+    "description": "procedurally generate a tree, turtle graphics style!"
+  },
+  {
+    "title": "SPH fluid solver",
+    "imagePath": "assets/images/node.png",
+    "description": "Simple 3d fluid Solver rendered in OpenGL"
+  },
+  {
+    "title": "Meeting cards",
+    "imagePath": "assets/images/node.png",
+    "description": "Trow Goats Everywhere!"
+  },
+  {
+    "title": "Deep Beat",
+    "imagePath": "assets/images/node.png",
+    "description": "Protect your base through the power of music!"
+  }
+
+]

@@ -1,0 +1,12 @@
+//Created by lejonmcgowan on 9/21/16.
+
+.col-lg-4.col-md-6
+    .card.card-inverse
+        a.thumb-cover(href='#')
+        .thumbnail
+            img.img-fluid(src='assets/images/nodes.png')
+            .hover-card-overlay
+                p.text-light #{project.description}
+        .card-block
+            h3.text-xs-center #{project.title}
+            p.text-xs-center.hidden-md-up #{project.description}

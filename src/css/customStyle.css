@@ -1,0 +1,82 @@
+@media (min-width: 768px) {
+    .navbar-center {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+}
+
+#backgroundImage {
+    /*background-image: url("/assets/images/testTess.jpg");*/
+    background-color: #E6E6E6;
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+#innerBackground {
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:-1;
+    min-height: 100%;
+}
+.text-light
+{
+    color: whitesmoke;
+}
+
+.background-light {
+    background-color: #D9D9D9;
+    box-shadow: 0 10px 10px rgba(100, 100, 100, 0.3)
+}
+
+.card {
+    border-radius: 12px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.card .thumbnail {
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background: transparent;
+}
+.card .thumbnail>img {
+    border-radius: 12px 12px;
+    box-shadow: 0 25px 20px -21px rgba(120,120,120,0.57);
+}
+.card .thumb-cover {
+    padding: 15px 20px;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    opacity: 0;
+    display: block;
+    width: 100%;
+    background-color: rgba(40,40,40,0.75);
+    z-index: 3;
+    content: "";
+    left: 0;
+    border-radius: 12px;
+}
+
+.card:hover .thumb-cover, .card:hover .hover-card-overlay {
+    opacity: 1;
+}
+
+.card .hover-card-overlay {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+}

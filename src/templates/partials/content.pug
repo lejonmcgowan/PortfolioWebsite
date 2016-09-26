@@ -1,0 +1,19 @@
+//
+   Created by lejonmcgowan on 9/21/16.
+
+html(lang="en")
+    head
+        title Jade Test
+        meta(charset="UTF-8")
+        block script
+        link(rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css")
+        link(rel="stylesheet" type="text/css" href="css/customStyle.css")
+        script(type="text/javascript" src="jquery/jquery.js")
+        script(type="text/javascript" src="tether/js/tether.min.js")
+        script(type="text/javascript" src="bootstrap/js/bootstrap.js")
+    body
+        #backgroundImage
+            include header
+            div.container
+                #innerBackground.background-light
+                    block content

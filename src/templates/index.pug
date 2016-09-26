@@ -1,0 +1,7 @@
+extends partials/content.pug
+
+block content
+    h1.text-xs-center.p-t-2.text-muted LeJon McGowan
+    #projectBox.m-t-3
+        - for (project in projects)
+            include partials/projectCard
