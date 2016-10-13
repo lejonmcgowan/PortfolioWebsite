@@ -18,7 +18,7 @@ app.use('/jquery',express.static(__dirname + '/node_modules/jquery/dist'));
 app.use('/tether',express.static(__dirname + '/node_modules/tether/dist'));
 
 var projectCardHeaders = require('./src/js/cardHeaders.json');
-var jumboInfos = require('.src/js/projectHeaders.json');
+var jumboInfos = require('./src/js/projectHeaders.json');
 
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/src/templates/');
@@ -41,4 +41,36 @@ app.get('/about', function(request, response)
 app.get('/contact', function(request, response)
 {
     response.render('contact');
+});
+
+//project pages
+
+app.get('/LTree', function(request, response)
+{
+	response.render("projectPages/lTree",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks']});
+});
+
+app.get('/attackVector', function(request, response)
+{
+	response.render("projectPages/lTree",{"project": jumboInfos['attack_vector'], "techLinks": jumboInfos['techLinks']});
+});
+
+app.get('/balrog', function(request, response)
+{
+	response.render("projectPages/lTree",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks']});
+});
+
+app.get('/sphdemo', function(request, response)
+{
+	response.render("projectPages/sph",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks']});
+});
+
+app.get('/stickit', function(request, response)
+{
+	response.render("projectPages/lTree",{"project": jumboInfos['stikit'], "techLinks": jumboInfos['techLinks']});
+});
+
+app.get('/deepbeat', function(request, response)
+{
+	response.render("projectPages/lTree",{"project": jumboInfos['deepbeat'], "techLinks": jumboInfos['techLinks']});
 });

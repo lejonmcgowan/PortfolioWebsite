@@ -1,0 +1,22 @@
+
+mixin processKV(key, value)
+    script.
+        console.log("#{key}" + ":" + "#{value}")
+    case key
+        when "Name"
+            //nothing, already taken care of with title
+            - break
+        when "Technologies"
+            p #{key} : 
+                each tech in value
+                    - var url = techLinks[tech];
+                    if url
+                        a(href=url) #{tech} 
+                    else
+                        span #{tech} 
+        default 
+            p #{key} : #{value}
+
+.jumbotron
+  each value, key in project
+    +processKV(key, value)

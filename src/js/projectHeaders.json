@@ -1,7 +1,17 @@
 {
 	"techLinks":
 	{
-		"SFML": "http://www.sfml-dev.org/"
+		"SFML": "http://www.sfml-dev.org/",
+		"ChromeCast API": "https://developers.google.com/cast/",
+		"Android": "https://developer.android.com/index.html",
+		"JQuery": "https://jquery.com/",
+		"LibGDX": "https://libgdx.badlogicgames.com/",
+		"Tiled": "http://www.mapeditor.org/",
+		"Unreal Engine 4":"https://www.unrealengine.com/what-is-unreal-engine-4",
+		"Cocos2d-js": "http://www.cocos2d-x.org/",
+		"Intel XDK": "https://software.intel.com/en-us/intel-xdk",
+		"EaselJS": "http://www.createjs.com/easeljs"
+
 	},
 
 	"playLinks":
@@ -14,8 +24,9 @@
 		"Name":"Stikit",
 		"Time Span": "October 2014, 2 Days",
 		"Team Size": "6",
-		"Technologies": ["Java", "ChromeCast API", "HTML/CSS/JS", "JQuery"],
+		"Technologies": ["Java", "ChromeCast API", "Android", "HTML/CSS/JS", "JQuery"],
 		"Estimated Development Time": "20 hours",
+		"Source": "https://github.com/alling9495/CalHacks2014-Stikit-Receiver\nhttps://github.com/alling9495/CalHacks2014-Stikit-App"
 	},
 
 	"attack_vector": 
@@ -25,6 +36,8 @@
 		"Team Size": "6",
 		"Technologies": ["C++","SFML"],
 		"Estimated Development Time": "20 hours",
+		"Source": "https://github.com/alling9495/GlobalGameJam2015"
+
 	},
 
 	"balrog": 
@@ -34,6 +47,7 @@
 		"Team Size": "6",
 		"Technologies": ["Java","LibGDX", "Tiled"],
 		"Estimated Development Time": "20 hours",
+		"Source": "https://github.com/RetroRebirth/GGJ2016"
 	},
 	"kiwi": 
 	{
@@ -42,6 +56,7 @@
 		"Team Size": "3",
 		"Technologies": ["C++", "Unreal Engine 4"],
 		"Estimated Development Time": "50 hours (main game development) + 10 hours (cutscene creation) + 10 hours (model creation)",
+		"Source": "https://github.com/lejonmcgowan/Jetpack-Kiwi"
 	},
 	"tower": 
 	{
@@ -50,6 +65,7 @@
 		"Team Size": "6",
 		"Technologies": ["Javascript","Cocos2d-js", "Intel XDK"],
 		"Estimated Development Time": "12 hours",
+		"Source": "https://github.com/alling9495/Intel-XDK-2015"
 	},
 	"deepbeat":
 	{
@@ -58,7 +74,8 @@
 		"Team Size": "3",
 		"Technologies": ["JS", "EaselJS", "NPM"],
 		"Estimated Development Time": "40 Hours",
-		"Source": "https://github.com/lejonmcgowan/DeepBeat"
+		"Source": "https://github.com/lejonmcgowan/DeepBeat",
+		"Play": "Play Now!"
 	}
 
 }
