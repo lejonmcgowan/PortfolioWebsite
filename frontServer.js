@@ -47,30 +47,41 @@ app.get('/contact', function(request, response)
 
 app.get('/LTree', function(request, response)
 {
-	response.render("projectPages/lTree",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks']});
+	response.render("projectPages/lTree",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks'], "playLink": jumboInfos["playLinks"]});
 });
 
 app.get('/attackVector', function(request, response)
 {
-	response.render("projectPages/lTree",{"project": jumboInfos['attack_vector'], "techLinks": jumboInfos['techLinks']});
+	response.render("projectPages/lTree",{"project": jumboInfos['attack_vector'], "techLinks": jumboInfos['techLinks'], 
+    "playLink": jumboInfos["playLinks"]});
 });
 
 app.get('/balrog', function(request, response)
 {
-	response.render("projectPages/lTree",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks']});
+	response.render("projectPages/balrog",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks'], 
+    "playLink": jumboInfos["playLinks"]});
 });
 
 app.get('/sphdemo', function(request, response)
 {
-	response.render("projectPages/sph",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks']});
+	response.render("projectPages/sph",{"project": jumboInfos['sph'], "techLinks": jumboInfos['techLinks'], 
+    "playLink": jumboInfos["playLinks"]});
 });
 
 app.get('/stickit', function(request, response)
 {
-	response.render("projectPages/lTree",{"project": jumboInfos['stikit'], "techLinks": jumboInfos['techLinks']});
+	response.render("projectPages/lTree",{"project": jumboInfos['stikit'], "techLinks": jumboInfos['techLinks'], 
+    "playLink": jumboInfos["playLinks"]});
 });
 
 app.get('/deepbeat', function(request, response)
 {
-	response.render("projectPages/lTree",{"project": jumboInfos['deepbeat'], "techLinks": jumboInfos['techLinks']});
+	response.render("projectPages/deepbeat",{"project": jumboInfos['deepbeat'], "techLinks": jumboInfos['techLinks'], 
+    "playLink": jumboInfos["playLinks"]});
+});
+
+app.get('/jetpack', function(request, response)
+{
+	response.render("projectPages/jetpack",{"project": jumboInfos['kiwi'], "techLinks": jumboInfos['techLinks'], 
+    "playLink": jumboInfos["playLinks"]});
 });

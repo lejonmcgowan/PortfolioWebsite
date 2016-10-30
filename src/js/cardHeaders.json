@@ -6,6 +6,12 @@
     "link": "/attackVector"
   },
   {
+    "title": "Jetpack Kiwi",
+    "imagePath": "assets/images/node.png",
+    "description": "The Flight Bird takes flight! boost through the wilderness to rescue your friend from the fangs of the stoats!",
+    "link": "/jetpack"
+  },
+  {
     "title": "Baaalrog",
     "imagePath": "assets/images/node.png",
     "description": "Trow Goats Everywhere!",

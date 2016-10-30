@@ -76,6 +76,24 @@
 		"Estimated Development Time": "40 Hours",
 		"Source": "https://github.com/lejonmcgowan/DeepBeat",
 		"Play": "Play Now!"
+	},
+	"ltree":
+	{
+		"Name": "Trees from L",
+		"Time Span": "November-December 2014, 2 weeks",
+		"Team Size": "1",
+		"Technologies": ["C++", "OpenGL"],
+		"Estimated Development Time": "45 Hours",
+		"Source": "https://github.com/lejonmcgowan/LSystemGenerator"
+	},
+	"sph":
+	{
+		"Name": "Smoothed Particle Hydrodynamics",
+		"Time Span": "February-March 2015, 2 weeks",
+		"Team Size": "1",
+		"Technologies": ["C++", "OpenGL"],
+		"Estimated Development Time": "35 Hours",
+		"Source": "https://github.com/lejonmcgowan/SPHOpenGL"
 	}
 
 }

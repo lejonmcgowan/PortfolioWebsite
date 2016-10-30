@@ -4,7 +4,7 @@ block content
     h1.text-xs-center.p-t-2.text-muted Trees From L
     #projectBox.m-t-3
         include ../partials/projectHeader.pug
-    .jumbotron
+    .jumbotron.hidden-xs-up
         h2 Controls
         p
             | Create a responsive table (will scroll horizontally on small devices under 768px). In addition: add alternating cell background color:
@@ -81,14 +81,14 @@ block content
     h3 Level 5: 
     p.supersmall
         | (pattern: FX+YF+FX-YF+FX+YF-FX-YF+FX+YF+FX-YF-FX+YF-FX-YF+FX+YF+FX-YF+FX+YF-FX-YF-FX+YF+FX-YF-FX+YF-FX-YFFX+YF+FX-YF+FX+YF-FX-YF+FX+YF+FX-YF-FX+YF-FX-YF+FX+YF+FX-YF+FX+YF-FX-YF-FX+YF+FX-YF-FX+YF-FX-YF[95 characters! And keep in mind this grows exponentially])
-    img.center-block(src='assets/images/ltree/dragon5.png', alt='Gragon level 5')
+    img.img-fluid.img.img-fluid-fluid.center-block(src='assets/images/ltree/dragon5.png', alt='Gragon level 5')
     h3
         | Level 10
     p.supersmall (3000+ characters):
-    img.center-block(src='assets/images/ltree/dragon10.png', alt='Dragon 10')
+    img.img-fluid.center-block(src='assets/images/ltree/dragon10.png', alt='Dragon 10')
     h3 Level 15
     p.supersmall (98000+ characters!)
-    img.center-block(src='assets/images/ltree/dragon15.png', alt='Dragon 15')
+    img.img-fluid.center-block(src='assets/images/ltree/dragon15.png', alt='Dragon 15')
     br
     p
         | It should be of note that many of these patterns rely on a constant “angle” to rotate at when producing the system. It is amazing how much one can do by manipulating only this ange and these rules. Let's look at another famous example, the well-known fractal called the Koch  snowflake:
@@ -105,11 +105,11 @@ block content
         p +: rotate 60 degrees to the left
         p -: rotate 60 degrees to the right
     h4 Level 1:
-    img.center-block(src='assets/images/ltree/koch1.png', alt='koch 1')
+    img.img-fluid.center-block(src='assets/images/ltree/koch1.png', alt='koch 1')
     h4 Level 3:
-    img.center-block(src='assets/images/ltree/koch3.png', alt='koch 3')
+    img.img-fluid.center-block(src='assets/images/ltree/koch3.png', alt='koch 3')
     h4 Level 5:
-    img.center-block(src='assets/images/ltree/koch5.png', alt='koch 5')
+    img.img-fluid.center-block(src='assets/images/ltree/koch5.png', alt='koch 5')
     br
     p
         | Last thing of note for basic L-stsyems is branches. In the pattern, they are usuall represented as '[' and ']', for pushing an popping the current state, respectively. This system often used to generate the branches of a tree, or to spread grass out radially from a source. Here is an example of the latter:
@@ -128,11 +128,11 @@ block content
         p [: push state
         p ]: pop state
     h4 Level 1
-    img.center-block(src='assets/images/ltree/grass1.png', alt='Grass level 1')
+    img.img-fluid.center-block(src='assets/images/ltree/grass1.png', alt='Grass level 1')
     h4 Level 2
-    img.center-block(src='assets/images/ltree/grass2.png', alt='Grass Level 2')
+    img.img-fluid.center-block(src='assets/images/ltree/grass2.png', alt='Grass Level 2')
     h4 Level 4
-    img.center-block(src='assets/images/ltree/grass4.png', alt='grass Level 4')
+    img.img-fluid.center-block(src='assets/images/ltree/grass4.png', alt='grass Level 4')
     br
     p
         | The number of different patterns to generate with these simple rules is linitless!
@@ -141,19 +141,19 @@ block content
     p
         | 3d, with my current structure, is merely more sets of productions to add. In addition to worrying only about rotating left and right (on the z-axis until now, assuming an xy-plane), the lsystem will have to keep track of the other 4 axes of rotation as well. An example of this is in my “Great Tree” file.
     h4 Level 0
-    img.center-block(src='assets/images/ltree/greatTree0.png', alt='Great tree Level 0')
+    img.img-fluid.center-block(src='assets/images/ltree/greatTree0.png', alt='Great tree Level 0')
     h4 Level 3
-    img.center-block(src='assets/images/ltree/greatTree3.png', alt='Great Tree Level 3')
+    img.img-fluid.center-block(src='assets/images/ltree/greatTree3.png', alt='Great Tree Level 3')
     h4 Level 5
-    img.center-block(src='assets/images/ltree/greatTree5.png', alt='Great Tree Level 5')
+    img.img-fluid.center-block(src='assets/images/ltree/greatTree5.png', alt='Great Tree Level 5')
     br
     p
         | I took the liberty of adding some extra functionality to give a simple animation. This changes the angle given, in order to affect the yaw, pitches, and rolls all at once. In this case the wind shifts the tree +/- 10 degrees
     br
-    img.center-block(src='assets/images/ltree/minWind.png', alt='Minimum wind')
+    img.img-fluid.center-block(src='assets/images/ltree/minWind.png', alt='Minimum wind')
     p.supersmall.text-center Tree at -10 degrees of angle
     br
-    img.center-block(src='assets/images/ltree/maxWind.png', alt='Maximum Wind')
+    img.img-fluid.center-block(src='assets/images/ltree/maxWind.png', alt='Maximum Wind')
     p.supersmall.text-center Tree at +10 degrees of angle
     br
     .span12
