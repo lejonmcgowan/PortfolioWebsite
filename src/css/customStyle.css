@@ -19,6 +19,14 @@
     padding: 0.5em
 }
 
+#bannerBox
+{
+    background: rgba(0,0,30,0.45);
+    vertical-align: bottom;
+    margin-top: 200px;
+    padding: 10px;
+}
+
 #backgroundImage {
     background-image: url("/assets/images/GRID.png");
     background-color: #E6E6E6;
