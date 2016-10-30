@@ -1,10 +1,10 @@
 extends ../partials/content.pug
-
+block pre-content
+    -var projectName = "Deep Beat";
+    -var projectImage = "/assets/images/putin.png";
+    include ../partials/projectBanner.pug
 block content
-        -var projectName = "Deep Beat";
-        h1.text-xs-center.p-t-2.text-muted #{projectName}
-        #projectBox.m-t-3
-            include ../partials/projectHeader.pug
+        include ../partials/projectHeader.pug
 
         p This was the game developed for my Interactive Entertainment class. The idea behind this game was to make more of a "chill out" game, and a rhythm game felt like the best way to achieve this. We also wanted this game to be available to play for anyone, so the web was the natural place to deploy to. 
 

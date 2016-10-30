@@ -3,7 +3,7 @@
 
 html(lang="en")
     head
-        title Jade Test
+        title LeJon's Portfolio
         meta(charset="UTF-8")
         block script
         link(rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css")
@@ -14,7 +14,8 @@ html(lang="en")
     body
         #backgroundImage
             include header
+            block pre-content
             div.container.m-t-1
                 #innerBackground.background-light
-                    .container.m-x-2
+                    .container.m-x-2.m-t-2
                         block content
