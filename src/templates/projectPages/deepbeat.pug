@@ -1,0 +1,22 @@
+extends ../partials/content.pug
+
+block content
+        -var projectName = "Deep Beat";
+        h1.text-xs-center.p-t-2.text-muted #{projectName}
+        #projectBox.m-t-3
+            include ../partials/projectHeader.pug
+
+        p This was the game developed for my Interactive Entertainment class. The idea behind this game was to make more of a "chill out" game, and a rhythm game felt like the best way to achieve this. We also wanted this game to be available to play for anyone, so the web was the natural place to deploy to. 
+
+        p My orignal inspiration for the game based on a system with the game flow similar in the "2.5D perspective": a style that had a stylistic character traverse and platform a 3d world in a 2D fashion. Examples of games that have made use of this style are #[a(href="http://allyourgamearebelongtous.yolasite.com/resources/klonoa%20(5).jpg") Klnoa 2] and #[a(href="http://1079638729.rsc.cdn77.org/sisgame_img/pandemonium/real/2_pandemonium.jpg") Panomonium]. Considering the timeline of the project, I felt that this was a good compromise of creating a 3D scene (which could potentially lead in to a fll-fledged game), but with the relatively simple demands needed for a 2D game.
+
+        p To do this in Jetpack Kiwi, I made use of creating an Actor with custom state (walk, crouch,slide,jump, and rocket boost),  a 3d world through UE4's scene creator and a spline along the path that the character would move along. A signifigant portion of my contribution to the project was having the character properly traverse through the defined spline (which was more challenging than anticipated) and controlling the character state from input. I also made use of UE4's particle generator to create the fire particles emmited during a rocket boost. 
+
+        p This was my first real foray into UE4, so much of my time was spent learning the engine, how to use the blueprint interface, and adjusting to the various settings needed for the demo. Looking back at my experience, if I could redo the project now, I would have 
+        ul
+            li learned how to properly use the C++ portions of Unreal Engine to better encapsulate actor logic and prevent "Blueprint Spaghetti" 
+            li Used C++ more in general for mathmatical updates. while Blueprints provided an amazing interface in creating and visualizing game logic, it seemed to be overly-excesive when it came to perfoming the more menial coding tasks, like mathmatical equations. What could have been performed in a small funciton (like controlling gravity speed) took a dozen different nodes to retrieve a refernce to the current speed, add the vectors, and update the final value.
+            li Made proper use of UE4's [State machine](https://docs.unrealengine.com/latest/INT/Engine/Animation/StateMachines/Overview/index.html) to achieve what I did manually in Bluepints.
+            li Implemented basic logic needed to be considerd a proper gane, like beginning a level, mid-game dialouge, dying,checkpoints, and completing a level.
+
+        p The final product included a short cutscene another team member created, followed by the tech demo that aloowed you to move through the created world, and, of course, the 3d models created for the class (final models used in-game created by another team member). The physics of the final product still needed a tweaking, but I otherwise felt confident in being able to implement a game around the final demo, and overall felt confident in the Blueprints side of UE4.
