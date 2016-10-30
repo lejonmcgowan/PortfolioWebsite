@@ -3,10 +3,10 @@
 .col-lg-4.col-md-6
     .card.card-inverse
         - var url = project.link
-        a.thumb-cover(href=url)
+        a.thumb-cover.hidden-sm-down(href=url)
         .thumbnail
             img.img-fluid(src='assets/images/nodes.png')
-            .hover-card-overlay
+            .hover-card-overlay.hidden-sm-down
                 a.link-color-disable(href=url) 
                     p.text-light #{project.description}
         .card-block
