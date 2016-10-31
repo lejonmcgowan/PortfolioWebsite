@@ -1,14 +1,16 @@
 //Created by lejonmcgowan on 9/21/16.
 
-.col-lg-4.col-md-6
-    .card.card-inverse
-        - var url = project.link
-        a.thumb-cover.hidden-sm-down(href=url)
-        .thumbnail
-            img.img-fluid(src=project.imagePath)
-            .hover-card-overlay.hidden-sm-down
-                a.link-color-disable(href=url) 
-                    p.text-light #{project.description}
-        .card-block
-            h3.text-xs-center #{project.title}
-            p.text-xs-center.hidden-md-up #{project.description}
+- var url = project.link
+    .col-lg-4.col-md-6
+        .card.card-inverse
+            a.thumb-cover.hidden-sm-down(href=url)
+            .thumbnail
+                a(href=url)
+                    img.img-fluid(src=project.imagePath)
+                    .hover-card-overlay.hidden-sm-down
+                        a.link-color-disable(href=url) 
+                            p.text-light #{project.description}
+            a.link-color-disable(href=url)
+                .card-block
+                    h3.text-xs-center #{project.title}
+                    p.text-xs-center.hidden-md-up #{project.description}

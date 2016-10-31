@@ -29,12 +29,7 @@
     "description": "Simple 3d fluid Solver rendered in OpenGL",
     "link": "SPHDemo"
   },
-  {
-    "title": "Stikit",
-    "imagePath": "assets/images/stikit/stikitlogo.png",
-    "description": "brainstorm with your phones. Share to the big screen!",
-    "link": "/stikit"
-  },
+  
   {
     "title": "Deep Beat",
     "imagePath": "assets/images/dbeat/deepbeatlogo.png",

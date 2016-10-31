@@ -1,0 +1,24 @@
+extends ../partials/content.pug
+block pre-content
+    -var projectName = "Power Tower";
+    -var projectLead = "Manage. Protect. Prevail"
+    -var projectImage = "/assets/images/tower/powertowerlogo.png";
+    include ../partials/projectBanner.pug
+block content
+        include ../partials/projectHeader.pug
+
+        p Made in Cocos2d (deployed to mobile platforms). Navigate your army through the treacherous tesla field and survive! This was a game made over the span of a day using an experimental build of the Intel XDK, a cross-platform framework/IDE made to develop a game in Javascript and deploy to IOS, Android, and Web. 
+
+        .embed-responsive.embed-responsive-16by9.m-y-1(align='center')
+            video.embed-responsive-item(controls)
+                source(src='assets/videos/powertower2.mp4', type='video/mp4')
+        
+        p The idea for this game revolved around having a tower defense game with a shared resource pool your army must allocate appropriately. Using the name as the basis for the theme, we decided that using a shared power grid for your turrets was a proper fit for the feature. In the game, you control 9 different turrets whose activity can be toggled off and on, but their recharge rates are based on the number of active turrets. A turret can only charge if active, so the player would have to be active about choosing which turrets need to be on and off, and if a turret needed to be charged despite no enemies being nearby. 
+
+        figure.figure.col-xs-12.text-xs-center
+            img.img-fluid(src="assets/images/tower/powertower1.png" alt="Demon After")
+            firgurecaption.figure-caption Tower defense nodes
+        
+        p During gameplay, active turrets with enough energy would target within their given radius, and rotate and shoot the nearest enemy, which came in 3 varieties: generic foot soldier, quick but weak insects, and slow but bulky tanks). The player shoots the enemies in an attempt to prevent the base from being attacked. If the base runs out of health, it is game over.  
+        
+        p My personal responsibility for the project revolved around the development of the player’s turrets. This included the placement of the turrets, the amount of power the tanks had, the amount of energy recharged and spent (based on the number of active turrets, finding the nearest enemy, and the proper rotation to shoot enemies.  

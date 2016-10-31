@@ -33,7 +33,7 @@ app.get('/', function(request, response)
    response.render('index',{"cardHeaders": projectCardHeaders});
 });
 
-app.get('/about', function(request, response)
+app.get('/resume', function(request, response)
 {
     response.render('about');
 });
@@ -47,7 +47,7 @@ app.get('/contact', function(request, response)
 
 app.get('/LTree', function(request, response)
 {
-	response.render("projectPages/lTree",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks'], "playLink": jumboInfos["playLinks"]});
+	response.render("projectPages/lTree",{"project": jumboInfos['ltree'], "techLinks": jumboInfos['techLinks'], "playLink": jumboInfos["playLinks"]});
 });
 
 app.get('/balrog', function(request, response)
@@ -83,5 +83,11 @@ app.get('/jetpack', function(request, response)
 app.get('/attackvector', function(request, response)
 {
     response.render("projectPages/attackvector",{"project": jumboInfos['attack_vector'], "techLinks": jumboInfos['techLinks'], 
+    "playLink": jumboInfos["playLinks"]});
+});
+
+app.get('/powertower', function(request, response)
+{
+    response.render("projectPages/powertower",{"project": jumboInfos['tower'], "techLinks": jumboInfos['techLinks'], 
     "playLink": jumboInfos["playLinks"]});
 });

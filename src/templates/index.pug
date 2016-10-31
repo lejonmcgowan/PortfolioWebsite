@@ -3,7 +3,5 @@ extends partials/content.pug
 block content
     h1.text-xs-center.p-t-2.text-muted My Projects
     #projectBox.m-t-3
-        each project in cardHeaders
-            script.
-                console.log("#{JSON.stringify(project)}")
-            include partials/projectCard
+    each project in cardHeaders
+        include partials/projectCard

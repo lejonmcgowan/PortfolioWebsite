@@ -1,12 +1,24 @@
 extends ../partials/content.pug
 block pre-content
     -var projectName = "Deep Beat";
-    -var projectImage = "/assets/images/putin.png";
+    -var projectLead = "Rhytm-based space defender. Keep the groovitron's flow moving!"
+    -var projectImage = "/assets/images/dbeat/deepbeatlogo.png";
+
     include ../partials/projectBanner.pug
 block content
         include ../partials/projectHeader.pug
 
         p This was the game developed for my Interactive Entertainment class. The idea behind this game was to make more of a "chill out" game, and a rhythm game felt like the best way to achieve this. We also wanted this game to be available to play for anyone, so the web was the natural place to deploy to. 
+
+        h3 Tutorial Level
+        .embed-responsive.embed-responsive-16by9.m-y-1(align='center')
+            video.embed-responsive-item(controls)
+                source(src='assets/videos/deepbeat.mp4', type='video/mp4')
+
+        h3 Typical level play
+        .embed-responsive.embed-responsive-16by9.m-y-1(align='center')
+            video.embed-responsive-item(controls)
+                source(src='assets/videos/deepbeatFake.mp4', type='video/mp4')
 
         p My orignal inspiration for the game based on a system with the game flow similar in the "2.5D perspective": a style that had a stylistic character traverse and platform a 3d world in a 2D fashion. Examples of games that have made use of this style are #[a(href="http://allyourgamearebelongtous.yolasite.com/resources/klonoa%20(5).jpg") Klnoa 2] and #[a(href="http://1079638729.rsc.cdn77.org/sisgame_img/pandemonium/real/2_pandemonium.jpg") Panomonium]. Considering the timeline of the project, I felt that this was a good compromise of creating a 3D scene (which could potentially lead in to a fll-fledged game), but with the relatively simple demands needed for a 2D game.
 

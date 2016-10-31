@@ -1,5 +1,12 @@
 extends ../partials/content.pug
 
+block pre-content
+    -var projectName = "L system Generator";
+    -var projectLead = "Procedurally generated structures in OpenGL"
+    -var projectImage = "/assets/images/ltree/maxWind.png";
+
+    include ../partials/projectBanner.pug
+
 block content
     h1.text-xs-center.p-t-2.text-muted Trees From L
     #projectBox.m-t-3

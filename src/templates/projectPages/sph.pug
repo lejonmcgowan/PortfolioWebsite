@@ -1,5 +1,12 @@
 extends ../partials/content.pug
 
+block pre-content
+    -var projectName = "Smoothed Particle Hydrodynamics";
+    -var projectLead = "Fluid simulation in OpenGL"
+    -var projectImage = "/assets/images/sph/waterlogo.jpg";
+
+    include ../partials/projectBanner.pug
+
 block content
     h1.text-xs-center.p-t-2.text-muted Smoothed Particle Hydrodynamics
     #projectBox.m-t-3
