@@ -1,0 +1,18 @@
+extends ../partials/content.pug
+block pre-content
+    -var projectName = "Attack vector";
+    -var projectLead = "Hack into the Mainframe! Race to the Finish!"
+    -var projectImage = "/assets/images/putin.png";
+    include ../partials/projectBanner.pug
+block content
+        include ../partials/projectHeader.pug
+
+        p attack_vector is an infinite maze runner developd in 48 ohurs for Global Game Jam 2015, with a theme of  "What do we do now". 
+        
+        p In this game, you are a loose pointer on a system attempting to acquire higher systems permissions whilst running away from the garbage collector. The maze consists of colored memory blocks which you must navigate while both avoiding disintegrating memory blocks and both the void and memory not accessible to you. To win you must navigate your way through increasingly faster levels until you reach root permissions. 
+        
+        p This game was created in C++ with the game framework SFML.  The game's character (a pointer) navigates through 6 levels of an on-the-fly, procedurally generated maze, with each level increasing the speed of the level. The ltile behind the player would quickly disintegrete, creating an incentive for the player to move swiftly through the level. The tiles were generated in such a way that that there was always a guarateed way to move through the level. When the player goes outside of the tile boundaries, they world goes blank (simulating a segmentation fault). The player starts anew by heading towards the green polygon
+        
+        p In terms of personal responsibility, I primarily worked on two aspects. The first idea revolved around handling bullet logic for the pointer. The bad news was that the feature needs for shooting enemies was cut in lieu of the experience of creating a runner and not a 2d battler. The good news was that I re-rolled the same bullet pool logic for another feature later added: the afterimages. When the pointer dashes, it generates a couple of afterimages, and these are managed like particles with the ability to adjust the velocity, scale, and lifetime of them.  
+        
+        p The second part was making a shader used for a small effect. SFML supported GLSL shaders, so I made use of this to create a fisheye effect for when the pointer passed over the terrain. This was done by using a vertext shader to to push out and blur the texture within a certain radius. This effect in in reaction to uncertain boundaraies when running through the levels, and adding the effect help with determining if they were about to hit the boundary.

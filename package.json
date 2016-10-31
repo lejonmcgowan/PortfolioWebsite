@@ -1,7 +1,7 @@
 {
-  "name": "express_practice",
+  "name": "portfolio-website",
   "version": "1.0.0",
-  "description": "I need to learn express; let's do it w/ video!",
+  "description": "Portfolio of LeJon McGowan",
   "main": "index.js",
   "scripts": {
     "watch": "nodemon frontServer",
@@ -13,7 +13,11 @@
   },
   "keywords": [
     "express",
-    "practice"
+    "bootstrap",
+    "portfolio",
+    "LeJon",
+    "Pug",
+    "Jade"
   ],
   "author": "LeJon McGowan",
   "license": "MIT",

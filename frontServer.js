@@ -50,12 +50,6 @@ app.get('/LTree', function(request, response)
 	response.render("projectPages/lTree",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks'], "playLink": jumboInfos["playLinks"]});
 });
 
-app.get('/attackVector', function(request, response)
-{
-	response.render("projectPages/lTree",{"project": jumboInfos['attack_vector'], "techLinks": jumboInfos['techLinks'], 
-    "playLink": jumboInfos["playLinks"]});
-});
-
 app.get('/balrog', function(request, response)
 {
 	response.render("projectPages/balrog",{"project": jumboInfos['balrog'], "techLinks": jumboInfos['techLinks'], 
@@ -83,5 +77,11 @@ app.get('/deepbeat', function(request, response)
 app.get('/jetpack', function(request, response)
 {
 	response.render("projectPages/jetpack",{"project": jumboInfos['kiwi'], "techLinks": jumboInfos['techLinks'], 
+    "playLink": jumboInfos["playLinks"]});
+});
+
+app.get('/attackvector', function(request, response)
+{
+    response.render("projectPages/attackvector",{"project": jumboInfos['attack_vector'], "techLinks": jumboInfos['techLinks'], 
     "playLink": jumboInfos["playLinks"]});
 });
