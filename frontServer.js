@@ -10,6 +10,7 @@ var path = require('path');
 var app = express();
 
 app.use('/assets',express.static(__dirname + '/src/assets'));
+app.use('/favicon',express.static(__dirname + 'src/assets/favicon'));
 app.use('/css',express.static(__dirname + '/src/css'));
 app.use('/js',express.static(__dirname + '/src/js'));
 app.use('/stuff',express.static(__dirname + '/src/data'));
