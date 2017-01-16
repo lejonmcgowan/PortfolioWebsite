@@ -9,14 +9,14 @@ var path = require('path');
 
 var app = express();
 
-app.use('/assets',express.static(__dirname + '/src/assets'));
-app.use('/favicon',express.static(__dirname + 'src/assets/favicon'));
-app.use('/css',express.static(__dirname + '/src/css'));
-app.use('/js',express.static(__dirname + '/src/js'));
-app.use('/stuff',express.static(__dirname + '/src/data'));
-app.use('/bootstrap',express.static(__dirname + '/node_modules/bootstrap/dist'));
-app.use('/jquery',express.static(__dirname + '/node_modules/jquery/dist'));
-app.use('/tether',express.static(__dirname + '/node_modules/tether/dist'));
+app.use('/assets',express.static(path.join(__dirname, '/src/assets')));
+app.use('/favicon',express.static(path.join(__dirname, '/src/assets/favicon')));
+app.use('/css',express.static(path.join(__dirname, '/src/css')));
+app.use('/js',express.static(path.join(__dirname, '/src/js')));
+app.use('/stuff',express.static(path.join(__dirname, '/src/data')));
+app.use('/bootstrap',express.static(path.join(__dirname, '/node_modules/bootstrap/dist')));
+app.use('/jquery',express.static(path.join(__dirname, '/node_modules/jquery/dist')));
+app.use('/tether',express.static(path.join(__dirname, '/node_modules/tether/dist')));
 
 var projectCardHeaders = require('./src/data/cardHeaders.json');
 var jumboInfos = require('./src/data/projectHeaders.json');
