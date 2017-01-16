@@ -7,6 +7,11 @@
     }
 }
 
+.nav-size
+{
+    font-size: 22px;
+}
+
 #brand-text
 {
     font-size: xx-large;
@@ -15,8 +20,12 @@
 
 .text-overlay
 {
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0,0,0,0.15);
     padding: 0.5em
+}
+
+.stroke {
+ -webkit-text-stroke: 1px #BBD;
 }
 
 #bannerBox
@@ -36,8 +45,19 @@
 
 #portHeader {
     background-image: url("/assets/images/forest.jpg");
-    background-color: #E6E6E6;
     background-size: auto;
+}
+
+#portHeader::before{
+  background-color: rgba(30, 30, 30, 0.37);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none
 }
 
 #innerBackground {
@@ -66,8 +86,8 @@
     height: 450px;
 }
 
-.background-light {
-    background-color: #C1DBE3;
+.content-background {
+    background-color: #002040;
     box-shadow: 0 10px 10px rgba(100, 100, 100, 0.3)
 }
 

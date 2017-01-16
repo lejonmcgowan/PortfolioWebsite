@@ -7,17 +7,15 @@ block pre-content
     include ../partials/projectBanner.pug
 
 block content
-    h1.text-xs-center.p-t-2.text-muted Baaalrog
-    #projectBox.m-t-3
-        include ../partials/projectHeader.pug
+    include ../partials/projectHeader.pug
 
-    p This was the game my team developed over 2 days for the 2016 #[a(href="http://globalgamejam.org/") Global Game Jam], based around the theme of "ritual". Based on the theme, the notion of sacrificing goats came to mind, and turned into a Top down arena battler. 
+    p.text-info This was the game my team developed over 2 days for the 2016 #[a(href="http://globalgamejam.org/") Global Game Jam], based around the theme of "ritual". Based on the theme, the notion of sacrificing goats came to mind, and turned into a Top.text-info down arena battler. 
 
     .embed-responsive.embed-responsive-16by9.m-y-1(align='center')
             video.embed-responsive-item(controls)
                 source(src='assets/videos/baalrog.mp4', type='video/mp4')
 
-    p In the game, the player's goal is to defeat the boss demon on the north side of the arena (the Baaalrog, please excuse the pun) and exit the cave lying beyond it. Throughout the battle, goats, and demons are spawed out of the pits  in the arena, and the players uses the goats to destroy the demons and, ultimately, the boss in order to escape. The demons can charge, and the boss periodically launches an intense fire breath, blowing away players and goats alike, so a signifigant part of the strategy involves using the goats offensively and defensively to avoid damage.
+    p.text-info In the game, the player's goal is to defeat the boss demon on the north side of the arena (the Baaalrog, please excuse the pun) and exit the cave lying beyond it. Throughout the battle, goats, and demons are spawed out of the pits  in the arena, and the players uses the goats to destroy the demons and, ultimately, the boss in order to escape. The demons can charge, and the boss periodically launches an intense fire breath, blowing away players and goats alike, so a signifigant part of the strategy involves using the goats offensively and defensively to avoid damage.
 
     figure.figure.col-lg-6.text-xs-center
         img.img-fluid(src="assets/images/balrog/balrogbegin.png" alt="Moving Kiwi")
@@ -27,7 +25,7 @@ block content
         img.img-fluid(src="assets/images/balrog/firebreath.png" alt="Kiwi in boosted state")
         firgurecaption.figure-caption And he angry!
 
-    p The game was developed in #[a(href="https://libgdx.badlogicgames.com/") LibGDX], a cross-platform, Java game framework that is capable of deploying to desktop, web, and mobile alike (this game was made to deploy with desktop, with web deployment planned, but incomplete). The game was rapidly developed with the core of a customly spun #[a(href="http://www.gamedev.net/page/resources/_/technical/game-programming/understanding-component-entity-systems-r3013") entity component system], with extensive use of a of the #[a(href="https://en.wikipedia.org/wiki/Factory_method_pattern") facotry pattern] to devlop features. 
+    p.text-info The game was developed in #[a(href="https://libgdx.badlogicgames.com/") LibGDX], a cross-platform, Java game framework that is capable of deploying to desktop, web, and mobile alike (this game was made to deploy with desktop, with web deployment planned, but incomplete). The game was rapidly developed with the core of a customly spun #[a(href="http://www.gamedev.net/page/resources/_/technical/game-programming/understanding-component-entity-systems-r3013") entity component system], with extensive use of a of the #[a(href="https://en.wikipedia.org/wiki/Factory_method_pattern") facotry pattern] to devlop features. 
 
     figure.figure.col-lg-6.text-xs-center
         img.img-fluid(src="assets/images/balrog/demon.png" alt="Demon Before")
@@ -41,9 +39,9 @@ block content
         img.img-fluid(src="assets/images/balrog/map.png" alt="Demon After")
         firgurecaption.figure-caption A look into the map view layed out in Tiled
 
-    p We also made use of the #[a(href="http://www.mapeditor.org/") Tiled] to create and manage the world the game objects were in. Tiled in particular made it easy to determine which parts of the map which entities (and in which state) could interact with. For example, the player and sheep made collisions with the pit parts of the map, but a thrown sheeo was able to pass over or fall into the abyss.
+    p.text-info We also made use of the #[a(href="http://www.mapeditor.org/") Tiled] to create and manage the world the game objects were in. Tiled in particular made it easy to determine which parts of the map which entities (and in which state) could interact with. For example, the player and sheep made collisions with the pit parts of the map, but a thrown sheeo was able to pass over or fall into the abyss.
 
-    p I worked on various features throughout the game, but I was primarlily responsible for the particfle effects emited from a defeeated demon, and the particles used in the fire breath from the boss. The latter requred a bit of time in order to tweak the fire particles' hitbox (which was in a fan formation, as oppsed to the traditioanal rectangle) interaction with the player and provide decent pushback. All the particle effects were design in LibGDX's #[a(href="https://github.com/libgdx/libgdx/wiki/2D-Particle-Editor") particle editor], which easily allowed for me to intuitively create and update a particles lifetime, speed, angle, mass, and color.
+    p.text-info I worked on various features throughout the game, but I was primarlily responsible for the particfle effects emited from a defeeated demon, and the particles used in the fire breath from the boss. The latter requred a bit of time in order to tweak the fire particles' hitbox (which was in a fan formation, as oppsed to the traditioanal rectangle) interaction with the player and provide decent pushback. All the particle effects were design in LibGDX's #[a(href="https://github.com/libgdx/libgdx/wiki/2D-Particle-Editor") particle editor], which easily allowed for me to intuitively create and update a particles lifetime, speed, angle, mass, and color.
 
     figure.figure.col-xs-12.text-xs-center
         img.img-fluid(src="assets/images/balrog/deadbalrog.png" alt="Demon After")
