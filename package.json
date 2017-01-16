@@ -7,6 +7,7 @@
     "watch": "nodemon frontServer",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node frontServer",
+    "stop": "killall -SIGINT frontServer",
     "start-server": "npm run start && npm run listen",
     "debug": "nodemon --debug frontServer.js",
     "debug-start": "node-inspector"

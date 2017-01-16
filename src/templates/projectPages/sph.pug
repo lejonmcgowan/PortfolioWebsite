@@ -38,74 +38,61 @@ block content
                     tr
                         td space bar
                         td Start/pause the simulation
-    h2 Water!
-    p
-        | My project worked with a prinicple known as 
+    h2.text-info Water!
+    p.text-info My project worked with a prinicple known as 
         a(href='http://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics') Smoothed Particle Hydrodynamics (SPH)
         | , a way to use particles to model and simulate fluids. More details of implementation can be found 
         a(href='https://software.intel.com/en-us/articles/fluid-simulation-for-video-games-part-15') here
     .span12
         hr
-    h2 About SPH
-    p
-        | Like other fluids, SPH relies on a mathmatical and programmatic way of interpreting the 
+    h2.text-info About SPH
+    p.text-info Like other fluids, SPH relies on a mathmatical and programmatic way of interpreting the 
         a(href='https://software.intel.com/en-us/articles/fluid-simulation-for-video-games-part-1') Navier-Stokes equation
         | , which can be thought of as the fluid's version of Newton's 2nd law. the formula is shown here
     .jumbotron
         h3 Navier-Stokes equation
         img(src='assets/images/sph/navier.png', alt='')
-    p
+    p.text-info
         | The math is a bit involved (the links above help guide you the right way), but SPH comes down to changing the desities and pressures of particles based on the neighboring particles and how far away they are from each other. The Main equation in question is here:
     .jumbotron
         img(src='assets/images/sph/sphGradient.png', alt='')
-    p
-        | Most of the variables and terminology are general algebra (and the gradient, vector calculus), but special attention needs to be given to 
-        i w
-        | . 
-        i w
-        |  is what is known as a smoothing kernel. The smoothing kernel is a specialized function that tells the simulation how much "influence" a neighboring particle has on the particle in question. The kernel and its derivations (gradients and Laplacians in the vector calulus world) are the heart of calulcating the densities and pressures.
+    p.text-info Most of the variables and terminology are general algebra (and the gradient, vector calculus), but special attention needs to be given to what is known as a smoothing kernel. The smoothing kernel is a specialized function that tells the simulation how much "influence" a neighboring particle has on the particle in question. The kernel and its derivations (gradients and Laplacians in the vector calulus world) are the heart of calulcating the densities and pressures.
     .span12
         hr
-    h2 Implementing SPH:
-    p
-        | Implementing the simulation is actually very similar to other time-stepped approaches. It is a matter of modeling the appropriate variables (in this case, 
+    h2.text-info Implementing SPH:
+    p.text-info Implementing the simulation is actually very similar to other time-stepped approaches. It is a matter of modeling the appropriate variables (in this case, 
         a(href='http://en.wikipedia.org/wiki/Viscosity') viscocity
         | , density, and other important properties had to be added into my Particle structure), adding in forces, and using a time step to integrate in the steps the particles take through the simulation. The fluids formulas get a bit trickier than traditional, newtonian, physics, but the methodology remains the same.
-    h2 Spatial Partitioning
+    h2.text-info Spatial Partitioning
     img.center-block(src='assets/images/sph/spatialPartioning.gif', alt='Spatial partitioning')
-    p
+    p.text-info
         | This was an important optimization for my program. 
         a(href='http://gameprogrammingpatterns.com/spatial-partition.html') Spatial partitioning 
         |  is basically taking one big structure of data at various locations, and splitting it up based on where it is in space. The link provided describes it as a parallel sorting a "1d" grid by position and using a binary search.
     br
-    p
+    p.text-info
         | A poper spatial partition can have varying levels of depth, but a simple level 1 split into width * height * depth partitions proved more than enough for satisfaction. The partitioning took me from rendering 200 particles (now my default value when run) at some 5 frams per second:
     br
     img.center-block(src='assets/images/sph/water200/water1.jpeg', alt='small particles')
-    p.supersmall.text-center "Only" 200 particles
+    p.supersmall.text-center.text-info "Only" 200 particles
     br
-    p
-        | to my program and computer being able to handle 1500 particles at some 10FPS, all other factors unchanged:
-    img.center-block(src='assets/images/sph/water1500/water2.jpeg', alt='Maximum Wind')
-    p.supersmall.text-center 1500 particles
+    p.text-info
+        | to my 2012 laptop (2012 Intel 3rd Generation, using integrated graphics) being able to handle 1500 particles at some 10FPS, all other factors unchanged:
+    img.center-block(src='assets/images/sph/water1500/water2.jpeg', alt='more particles')
+    p.supersmall.text-center.text-info 1500 particles
     br
-    p
-        | I tend to run the program at with about 800-1000 particles for a mix of particle size and smoothness in running
-    .span12
-        hr
-    h2 The Code:
-    p
+    
+    h2.text-info The Code:
+    p.text-info
         | The main generates a vector of particles, a class that contains the the properties needed to model a partical in SPH and render a colorable sphere to the screen. These particles are then passed into the SPHSolver class and partitioned accordingly by the GridManager propertiy. The Gridmanager contains a vector of GridElements, which just contain a partition of the Particles in a vector.
-    p
+    p.text-info
         | When the update is initiated, the SPH runs through it's update method, resets the particle and grid values, and updates the values accordingly. the SPH formula as seen above makes use of quite a few summations, and the way I request grid elements (as if it is in a 3d space) means there are many triple for loops to iterate through the grids. Splitting up these functions made the overall class much more readable.
-    p
+    p.text-info
         | The relevant Kernel functions are also kept in their own respective class. despite the difficult theory behind making proper kernels (and which on makes "proper" physics), the functions here are fairly simple arithmatic. It really is another one of those cases where
         | the mathmaticians to 99.9% of the work for the programmer
     .span12
         hr
-    h2 Performance
-    p
-        | The partitioning (even the relatively hacked together one used now) made the program perform much faster. What struggled to get 100 particles moving smoothly by brute force caused the program to render some 1000-1200 on my computer (with a 2012 Mobile graphics card) at a decent framerate. There is still plenty of room for improvement though. Having my particles in grids makes for a very, very parallelizable program, so I wouldn't be surprised to be able to render 5 times the particles at a still improved framerate over what I have now.
-    hr
-    br
+    h2.text-info Performance
+    p.text-info  even a naive, grid partition scheme was able to make the program perform much faster. What struggled to get 100 particles moving smoothly by brute force caused the program to render some 1000-1200 on my computer (with a 2012 Mobile graphics card) at a decent framerate. There is still plenty of room for improvement though. I couls have made use of instancing on OpenGL's end to greatly decrease the burden of rendering. I could have also used a better partitioning scheme to further reduce the number of neighbors to check per particle. 
+    
     br

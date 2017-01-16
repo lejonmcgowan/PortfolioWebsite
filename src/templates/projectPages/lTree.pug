@@ -20,14 +20,14 @@ block content
     p.text-info
         | An L-system is most simply represented as a string of characters. An alphabet describes how to restructure the string when a call for the next level of the system is made. For example let's look at this simple pattern.
     .jumbotron
-        h3.text-info Linear L-system:
+        h3 Linear L-system:
         br
         p Axiom: “F”
         p Productions: F → FF
     p.text-info
         | An L-system has an initial pattern, called an “axiom”, which is considered level “0”. To go to the next level (1 in this case), scan through the string and replace any pattern seen on the left side of the rules given (called productions) with what is on the right side of the assignment. In this simple case, this will generate 2^(level) F's
     .jumbotron
-        h3.text-info Linear Productions
+        h3 Linear Productions
         p Level 1: “FF”
         p Level 2: “FFFF”
         p Level 3: “FFFF FFFF”
@@ -44,7 +44,7 @@ block content
     p.text-info
         | The patterns produced by L-systems  can be used to generate a vast array of different designs. This is done by assigning a different task for each letter in the alphabet of the system. For example, if “F” in the above L-system had a task of drawing forward one unit, a level-N l-system here would produce a line that is 2^N units long. More interesting patterns come up as you add to the alphabet and give it more tasks to run. For example, let's look at the famous dragon curve:
     .jumbotron
-        h3.text-info Dragon Curve
+        h3 Dragon Curve
         br
         p angle: 90
         p axiom: FX
@@ -78,7 +78,7 @@ block content
     p.text-info
         | It should be of note that many of these patterns rely on a constant “angle” to rotate at when producing the system. It is amazing how much one can do by manipulating only this ange and these rules. Let's look at another famous example, the well-known fractal called the Koch  snowflake:
     .jumbotron
-        h3.text-info Koch Snowflake
+        h3 Koch Snowflake
         br
         p angle: 60
         p axiom: F++F++F
@@ -99,7 +99,7 @@ block content
     p.text-info
         | Last thing of note for basic L-stsyems is branches. In the pattern, they are usuall represented as '[' and ']', for pushing an popping the current state, respectively. This system often used to generate the branches of a tree, or to spread grass out radially from a source. Here is an example of the latter:
     .jumbotron
-        h3.text-info 3 way branching grass
+        h3 3-way branching grass
         br
         p angle: 45 degrees
         p axiom: F

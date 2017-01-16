@@ -1,7 +1,13 @@
 extends partials/content.pug
 
 block content
-    h1.text-xs-center.p-t-2.text-info My Projects
+    i
+        h2.p-t-2.text-info Bringing Creativity to Life
+    br
+
+    h5.text-info I am a student at Cal Poly SLO, majoring in Software Engineering, and minoring in Computing for Interactive Arts. Visual arts are my passion and I want to contribute to the field from a technical perspective. I specialize in computer graphics and am currently seeking employment in the game or animation industry.
+
+    h2.
     #projectBox.m-t-3
     each project in cardHeaders
-        include partials/projectCard
+        include partials/projectListEntry

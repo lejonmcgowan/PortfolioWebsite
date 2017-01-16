@@ -1,0 +1,11 @@
+//Created by lejonmcgowan on 1/15/17.
+
+- var url = project.link
+    .container
+        a.thumb-cover.hidden-sm-down(href=url)
+            h3.text-info.col.xs-12.m-l-1 #{project.title}
+        a.thumb-cover.col-xs-4(href=url)
+            img.img-fluid(src=project.imagePath)
+            .hover-card-overlay.hidden-sm-down        
+        p.col-xs-8.text-info #{project.description}
+        hr.col-xs-12

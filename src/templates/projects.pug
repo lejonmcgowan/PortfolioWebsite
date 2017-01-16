@@ -1,0 +1,9 @@
+extends partials/content.pug
+
+block content
+    h2.text-xs-center.p-t-2.text-info Ongoing Projects
+    
+    h2.text-xs-center.p-t-2.text-info Previous Projects
+    #projectBox.m-t-3
+    each project in cardHeaders
+        include partials/projectCard
