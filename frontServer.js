@@ -19,6 +19,7 @@ app.use('/jquery',express.static(path.join(__dirname, '/node_modules/jquery/dist
 app.use('/tether',express.static(path.join(__dirname, '/node_modules/tether/dist')));
 
 var projectCardHeaders = require('./src/data/cardHeaders.json');
+var projectEntries = require('./src/data/projectEntries.json');
 var jumboInfos = require('./src/data/projectHeaders.json');
 
 app.set('view engine', 'pug');
@@ -31,7 +32,7 @@ app.listen(3000, function()
 
 app.get('/', function(request, response)
 {
-   response.render('index',{"cardHeaders": projectCardHeaders});
+   response.render('index',{"cardHeaders": projectEntries});
 });
 
 app.get('/resume', function(request, response)
