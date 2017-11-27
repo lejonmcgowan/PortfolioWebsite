@@ -1,1 +1,0 @@
-I am currently using Boostrap v4.0.0-alpha-4. alpha 5 breaks some of my margin classes, and alpha 6 breaks the a LOT of spacing, most likely due to the updating to flexbox. Major revisions will need to be met before updating.
