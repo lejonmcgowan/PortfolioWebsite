@@ -1,9 +1,12 @@
 extends ../partials/content.pug
 
-block pre-content
+block vars
     -var projectName = "Baaaaalrog";
     -var projectLead = "Throw Goats, defeat demons!"
     -var projectImage = "/assets/images/balrog/balroglogo.png";
+    -var project = projectHeaders["balrog"];
+
+block pre-content
     include ../partials/projectBanner.pug
 
 block content

@@ -1,13 +1,15 @@
 //Created by lejonmcgowan on 9/21/16.
 //todo: have the navbar hide on scroll down, show on scroll up
-nav#portheader.navbar.navbar-dark.bg-primary
-    a(href="/")
-        h2#brand-text.col-lg-12.navbar-brand LeJon McGowan
+nav#portheader.navbar.navbar-expand-sm.navbar-dark.bg-dark
     div.container
-        ul.nav.navbar-nav.navbar-center
-            li.nav-item
-                a.nav-link.nav-size.stroke(href="/projects") Projects
-            li.nav-item
-                a.nav-link.nav-size.stroke(href="/resume") Resume
-            li.nav-item
-                a.nav-link.nav-size.stroke(href="/contact") Contact
+        a(href="index.html").navbar-brand LeJon McGowan
+        button.navbar-toggler(data-toggle="collapse" data-target="#navbarNav")
+            span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto.align-items-center
+                li.nav-item
+                    a.nav-link(href="projects.html") Projects
+                li.nav-item
+                    a.nav-link(href="resume.html") Resume
+                li.nav-item
+                    a.nav-link(href="contact.html") Contact

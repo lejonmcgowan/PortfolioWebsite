@@ -1,12 +1,13 @@
 //
    Created by lejonmcgowan on 9/21/16.
+block vars
 
 html(lang="en")
     head
         title LeJon's Portfolio
         meta(charset="UTF-8")
         block script
-        link(rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css")
+        link(rel="stylesheet" type="text/css" href="css/bootstrap.css")
         link(rel="stylesheet" type="text/css" href="css/customStyle.css")
         
         link(rel='shortcut icon', href='/favicon/favicon.ico')
@@ -30,9 +31,9 @@ html(lang="en")
         meta(name='msapplication-TileImage', content='/favicon/favicon-144.png')
         meta(name='msapplication-config', content='/favicon/browserconfig.xml')
 
-        script(type="text/javascript" src="jquery/jquery.js")
-        script(type="text/javascript" src="tether/js/tether.min.js")
-        script(type="text/javascript" src="bootstrap/js/bootstrap.js")
+        script(type="text/javascript" src="js/jquery.min.js")
+        script(type="text/javascript" src="js/popper.min.js")
+        script(type="text/javascript" src="js/bootstrap.min.js")
     body
         #backgroundImage
             include header

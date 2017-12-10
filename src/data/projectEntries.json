@@ -3,44 +3,44 @@
     "title": "Attack Vector",
     "imagePath": "assets/images/atkvec/vectorlogo.png",
     "description": " A c++ game made with SFML. A Maze runner developd in 48 hours for Global Game Jam 2015.",
-    "link": "/attackvector"
+    "link": "attackvector.html"
   },
   {
     "title": "Jetpack Kiwi",
     "imagePath": "assets/images/kiwi/kiwilogo.png",
     "description": "A 2.5D platformer tech demo developed in Unreal Engine 4.",
-    "link": "/jetpack"
+    "link": "jetpack.html"
   },
   {
     "title": "Baaalrog",
     "imagePath": "assets/images/balrog/balroglogo.png",
     "description": "A java game made with LibGDX, A top-down, action-adventure game developed in 48 hours for Global Game Jam 2016",
-    "link": "/balrog"
+    "link": "balrog.html"
   },
   {
     "title": "L-System Tree",
     "imagePath": "assets/images/ltree/greatTree5.png",
     "description": "An OpenGL implementation of procedurally generated L-Systems",
-    "link": "/LTree"
+    "link": "lTree.html"
   },
   {
     "title": "SPH fluid solver",
     "imagePath": "assets/images/sph/waterlogo.jpg",
     "description": "OpenGL implementation of an SPH fluid solver",
-    "link": "/SPHDemo"
+    "link": "SPHDemo.html"
   },
   
   {
     "title": "Deep Beat",
     "imagePath": "assets/images/dbeat/deepbeatlogo.png",
     "description": "A game made over the course of a month in Javascript, with a library called EaselJS. A rhythm/tower-defense hybrid game",
-    "link": "/deepbeat"
+    "link": "deepbeat.html"
   },
   {
     "title": "Power Tower",
     "imagePath": "assets/images/tower/powertowerlogo.png",
     "description": "Made in JavaScript inside of Intel's new XDK environment. A mobile, tower-defense game made in 24 hours for Intel's Hackathon",
-    "link": "/powertower"
+    "link": "powertower.html"
   }
 
 ]

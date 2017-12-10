@@ -1,10 +1,14 @@
 extends ../partials/content.pug
 
-block pre-content
+block vars
     -var projectName = "Attack vector";
     -var projectLead = "Hack into the Mainframe! Race to the Finish!"
     -var projectImage = "/assets/images/atkvec/vectorlose.png";
+    -var project = projectHeaders["attack_vector"];
+
+block pre-content
     include ../partials/projectBanner.pug
+
 block content
         include ../partials/projectHeader.pug
         p.text-info attack_vector is an infinite maze runner developd in 48 hours for Global Game Jam 2015, with a theme of  "What do we do now". 

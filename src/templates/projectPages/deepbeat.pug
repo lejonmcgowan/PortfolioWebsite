@@ -1,8 +1,12 @@
 extends ../partials/content.pug
-block pre-content
+
+block vars
     -var projectName = "Deep Beat";
     -var projectLead = "Rhytm-based space defender. Keep the groovitron's flow moving!"
     -var projectImage = "/assets/images/dbeat/deepbeatlogo.png";
+    -var project = projectHeaders["deepbeat"];
+
+block pre-content
 
     include ../partials/projectBanner.pug
 block content

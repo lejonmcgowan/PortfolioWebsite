@@ -9,13 +9,13 @@ mixin processKV(key, value)
         when "Technologies"
             p #{key} : 
                 each tech in value
-                    - var url = techLinks[tech];
+                    - var url = projectHeaders["techLinks"][tech];
                     if url
                         a(href=url) #{tech} 
                     else
                         span #{tech} 
         when "Play"
-            - var url = playLink[projectName];
+            - var url = projectHeaders["playLinks"][projectName];
             p #{key} : #[a(href=url) #{value}]
         default 
             p #{key} : #{value}

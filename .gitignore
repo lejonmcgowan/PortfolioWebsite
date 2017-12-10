@@ -1,6 +1,9 @@
 #IDE stuff
 .idea/
 
+#npm dependencies (will be re-installed with 'npm install')
+node_modules/
+
 # Logs
 logs
 *.log

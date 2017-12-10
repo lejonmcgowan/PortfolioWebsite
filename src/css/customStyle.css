@@ -1,21 +1,6 @@
-@media (min-width: 768px) {
-    .navbar-center {
-        float: none;
-        margin: 0 auto;
-        display: table;
-        table-layout: fixed;
-    }
-}
-
-.nav-size
+.navbar-brand
 {
-    font-size: 22px;
-}
-
-#brand-text
-{
-    font-size: xx-large;
-    text-shadow: 0px 0px 1px #555, -1px -1px #000, 1px 1px #555;
+    font-size: 28px;
 }
 
 .text-overlay

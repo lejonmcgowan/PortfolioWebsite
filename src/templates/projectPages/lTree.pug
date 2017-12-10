@@ -1,9 +1,11 @@
 extends ../partials/content.pug
-
-block pre-content
+block vars
     -var projectName = "L-system Generator";
     -var projectLead = "Procedurally generated structures in OpenGL"
     -var projectImage = "/assets/images/ltree/maxWind.png";
+    -var project = projectHeaders["ltree"];
+    
+block pre-content
 
     include ../partials/projectBanner.pug
 

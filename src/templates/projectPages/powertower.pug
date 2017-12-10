@@ -1,8 +1,12 @@
 extends ../partials/content.pug
-block pre-content
+
+block vars
     -var projectName = "Power Tower";
     -var projectLead = "Manage. Protect. Prevail"
     -var projectImage = "/assets/images/tower/powertowerlogo.png";
+    -var project = projectHeaders["tower"];
+
+block pre-content
     include ../partials/projectBanner.pug
 block content
         include ../partials/projectHeader.pug

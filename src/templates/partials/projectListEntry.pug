@@ -2,10 +2,10 @@
 
 - var url = project.link
     .container
-        a.thumb-cover.hidden-sm-down(href=url)
+        a.text-center.thumb-cover.hidden-sm-down(href=url)
             h3.text-info.col.xs-12.m-l-1 #{project.title}
         a.thumb-cover.col-xs-4(href=url)
-            img.img-fluid(src=project.imagePath)
+            img.img-fluid.mx-auto.d-block(src=project.imagePath)
             .hover-card-overlay.hidden-sm-down        
-        p.col-xs-8.text-info #{project.description}
+        p.text-center.col-xs-8.text-info #{project.description}
         hr.col-xs-12

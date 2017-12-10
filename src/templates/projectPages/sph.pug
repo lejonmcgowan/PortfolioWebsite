@@ -1,10 +1,11 @@
 extends ../partials/content.pug
-
-block pre-content
+block vars
     -var projectName = "Smoothed Particle Hydrodynamics";
     -var projectLead = "Fluid simulation in OpenGL"
     -var projectImage = "/assets/images/sph/waterlogo.jpg";
-
+    -var project = projectHeaders["sph"];
+    
+block pre-content
     include ../partials/projectBanner.pug
 
 block content

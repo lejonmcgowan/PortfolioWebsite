@@ -1,9 +1,12 @@
 extends ../partials/content.pug
 
-block pre-content
+block vars
     -var projectName = "Jetpack kiwi";
     -var projectLead = "Move through the forest to save the Kiwi from the hungry stoats"
     -var projectImage = "/assets/images/kiwi/kiwilogo.png";
+    -var project = projectHeaders["kiwi"];
+    
+block pre-content
     include ../partials/projectBanner.pug
         
 block content
