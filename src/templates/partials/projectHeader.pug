@@ -7,7 +7,7 @@ mixin processKV(key, value)
             //nothing, already taken care of with title
             - break
         when "Technologies"
-            p #{key} : 
+            p.mx-5.my-1.card-text #{key} : 
                 each tech in value
                     - var url = projectHeaders["techLinks"][tech];
                     if url
@@ -16,10 +16,11 @@ mixin processKV(key, value)
                         span #{tech} 
         when "Play"
             - var url = projectHeaders["playLinks"][projectName];
-            p #{key} : #[a(href=url) #{value}]
+            p.mx-5.my-1.card-text #{key} : #[a(href=url) #{value}]
         default 
-            p #{key} : #{value}
+            p.mx-5.my-1.card-text #{key} : #{value}
 
-.jumbotron
-  each value, key in project
-    +processKV(key, value)
+.card.bg-light.my-3
+    .card-header Stats
+    each value, key in project
+        +processKV(key, value)

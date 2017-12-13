@@ -66,13 +66,12 @@
 .bd-pageheader {
     padding-top: 4rem;
     padding-bottom: 4rem;
-    margin-bottom: 3rem;
     text-align: left;
     height: 450px;
 }
 
 .content-background {
-    background-color: #002040;
+    background-color: #150578;
     box-shadow: 0 10px 10px rgba(100, 100, 100, 0.3)
 }
 

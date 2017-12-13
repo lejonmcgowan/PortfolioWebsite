@@ -40,17 +40,18 @@ gulp.task('pug:templates', function() {
   	'src/templates/projectPages/*.pug'])
   .pipe(data(function(file)
     { 
-        console.log(file);
         var blob = {};
         //get all datafiles
 		var files = fs.readdirSync('src/data');
+        console.log(files);
         //take out the '.json' part to get the pure name
         files = files.map(file => file.slice(0,file.indexOf('.')));
         //assossiate each filename with the relevant JSON file
         files.forEach(function(file) {
              blob[file] = require('./src/data/' + file + '.json');
             });
-
+        
+        console.log(blob);
         return blob; 
 	}))
   .pipe(pug({

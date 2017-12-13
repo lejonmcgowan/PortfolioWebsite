@@ -12,21 +12,21 @@ block pre-content
 block content
     #projectBox.m-t-3
         include ../partials/projectHeader.pug
-    .jumbotron.hidden-xs-up
-    h2.text-info L-systems!
-    p.text-info
+    //.jumbotron.hidden-xs-up
+    h2.text-light L-systems!
+    p.text-light
         | My project focused mostly on generating and rendering patterns based off of  the formal grammer L-systems. L-systems stand for LindenMayer System, named after Biologist Astrid Lindenmayer. This was a system he derived to describe the growth of algae. It has been used as a simple way to represent the growth of many different forms of life.
     .span12
         hr
-    h2.text-info Understanding L-Systems:
-    p.text-info
+    h2.text-light Understanding L-Systems:
+    p.text-light
         | An L-system is most simply represented as a string of characters. An alphabet describes how to restructure the string when a call for the next level of the system is made. For example let's look at this simple pattern.
     .jumbotron
         h3 Linear L-system:
         br
         p Axiom: “F”
         p Productions: F → FF
-    p.text-info
+    p.text-light
         | An L-system has an initial pattern, called an “axiom”, which is considered level “0”. To go to the next level (1 in this case), scan through the string and replace any pattern seen on the left side of the rules given (called productions) with what is on the right side of the assignment. In this simple case, this will generate 2^(level) F's
     .jumbotron
         h3 Linear Productions
@@ -36,14 +36,14 @@ block content
         p Level 4: “FFFF FFFF FFFF FFFF”
         p Level 5: “FFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFF”
         p etc...
-    p.text-info
+    p.text-light
         | Note that the left hand side of the assignment does not necessarily have to be a single character, but it is preferred for simplicity (this is called a d0l-System, that enforces a unique one-letter left-hand production per L-system).
-    p.text-info
+    p.text-light
         | The power of L-systems comes from its ability to recursively re-write the pattern described to produce a more complex version of the original.  This makes this system very favorable for producing plant growth and fractals. These patterns can go on infinitely, but grow at an exponential rate (as seen with the above pattern).
     .span12
         hr
-    h2.text-info Implementing L-systems:
-    p.text-info
+    h2.text-light Implementing L-systems:
+    p.text-light
         | The patterns produced by L-systems  can be used to generate a vast array of different designs. This is done by assigning a different task for each letter in the alphabet of the system. For example, if “F” in the above L-system had a task of drawing forward one unit, a level-N l-system here would produce a line that is 2^N units long. More interesting patterns come up as you add to the alphabet and give it more tasks to run. For example, let's look at the famous dragon curve:
     .jumbotron
         h3 Dragon Curve
@@ -64,20 +64,20 @@ block content
         br
         p
             | X and Y in this case do nothing, and are only used for pattern generations. Below are the results of the dragon curves a certain levels.
-    p.text-info
+    p.text-light
         | when the following system above is implemented, the following patterns are genereated:
-    h3.text-info Level 5: 
-    p.supersmall.text-info
+    h5.text-muted Level 5: 
+    p.supersmall.text-muted
         | (pattern: FX+YF+FX-YF+FX+YF-FX-YF+FX+YF+FX-YF-FX+YF-FX-YF+FX+YF+FX-YF+FX+YF-FX-YF-FX+YF+FX-YF-FX+YF-FX-YFFX+YF+FX-YF+FX+YF-FX-YF+FX+YF+FX-YF-FX+YF-FX-YF+FX+YF+FX-YF+FX+YF-FX-YF-FX+YF+FX-YF-FX+YF-FX-YF[95 characters! And keep in mind this grows exponentially])
     img.img-fluid.img.img-fluid-fluid.center-block(src='assets/images/ltree/dragon5.png', alt='Gragon level 5')
-    h3.text-info Level 10
-    p.supersmall.text-info (3000+ characters):
+    h3.text-light Level 10
+    p.supersmall.text-light (3000+ characters):
     img.img-fluid.center-block(src='assets/images/ltree/dragon10.png', alt='Dragon 10')
-    h3.text-info.text-info Level 15
-    p.supersmall.text-info (98000+ characters!)
+    h3.text-light.text-light Level 15
+    p.supersmall.text-light (98000+ characters!)
     img.img-fluid.center-block(src='assets/images/ltree/dragon15.png', alt='Dragon 15')
     br
-    p.text-info
+    p.text-light
         | It should be of note that many of these patterns rely on a constant “angle” to rotate at when producing the system. It is amazing how much one can do by manipulating only this ange and these rules. Let's look at another famous example, the well-known fractal called the Koch  snowflake:
     .jumbotron
         h3 Koch Snowflake
@@ -91,14 +91,14 @@ block content
             |  F: move forward one unit
         p +: rotate 60 degrees to the left
         p -: rotate 60 degrees to the right
-    h4.text-info Level 1:
+    h4.text-light Level 1:
     img.img-fluid.center-block(src='assets/images/ltree/koch1.png', alt='koch 1')
-    h4.text-info Level 3:
+    h4.text-light Level 3:
     img.img-fluid.center-block(src='assets/images/ltree/koch3.png', alt='koch 3')
-    h4.text-info Level 5:
+    h4.text-light Level 5:
     img.img-fluid.center-block(src='assets/images/ltree/koch5.png', alt='koch 5')
     br
-    p.text-info
+    p.text-light
         | Last thing of note for basic L-stsyems is branches. In the pattern, they are usuall represented as '[' and ']', for pushing an popping the current state, respectively. This system often used to generate the branches of a tree, or to spread grass out radially from a source. Here is an example of the latter:
     .jumbotron
         h3 3-way branching grass
@@ -113,53 +113,53 @@ block content
         p -: rotate right
         p [: push state
         p ]: pop state
-    h4.text-info Level 1
+    h4.text-light Level 1
     img.img-fluid.center-block(src='assets/images/ltree/grass1.png', alt='Grass level 1')
-    h4.text-info Level 2
+    h4.text-light Level 2
     img.img-fluid.center-block(src='assets/images/ltree/grass2.png', alt='Grass Level 2')
-    h4.text-info Level 4
+    h4.text-light Level 4
     img.img-fluid.center-block(src='assets/images/ltree/grass4.png', alt='grass Level 4')
     br
-    p.text-info
+    p.text-light
         | The number of different patterns to generate with these simple rules is linitless!
     hr
-    h2.text-info 3d
-    p.text-info
+    h2.text-light 3d
+    p.text-light
         | 3d, with my current structure, is merely more sets of productions to add. In addition to worrying only about rotating left and right (on the z-axis until now, assuming an xy-plane), the lsystem will have to keep track of the other 4 axes of rotation as well. An example of this is in my “Great Tree” file.
-    h4.text-info Level 0
+    h4.text-light Level 0
     img.img-fluid.center-block(src='assets/images/ltree/greatTree0.png', alt='Great tree Level 0')
-    h4.text-info Level 3
+    h4.text-light Level 3
     img.img-fluid.center-block(src='assets/images/ltree/greatTree3.png', alt='Great Tree Level 3')
-    h4.text-info Level 5
+    h4.text-light Level 5
     img.img-fluid.center-block(src='assets/images/ltree/greatTree5.png', alt='Great Tree Level 5')
     br
-    p.text-info
+    p.text-light
         | I took the liberty of adding some extra functionality to give a simple animation. This changes the angle given, in order to affect the yaw, pitches, and rolls all at once. In this case the wind shifts the tree +/- 10 degrees
     br
     img.img-fluid.center-block(src='assets/images/ltree/minWind.png', alt='Minimum wind')
-    p.supersmall.text-center.text-info Tree at -10 degrees of angle
+    p.supersmall.text-center.text-light Tree at -10 degrees of angle
     br
     img.img-fluid.center-block(src='assets/images/ltree/maxWind.png', alt='Maximum Wind')
-    p.supersmall.text-center.text-info Tree at +10 degrees of angle
+    p.supersmall.text-center.text-light Tree at +10 degrees of angle
     br
     .span12
         hr
-    h2.text-info The Code:
-    p.text-info
+    h2.text-light The Code:
+    p.text-light
         | I took the liberty of adding some extra functionality to give a simple animation. This changes the angle given, in order to affect the yaw, pitches, and rolls all at once.
     .jumbotron
         p
             | new Lsystem → initialize axiom and shape to use → define productions → change level → render onto screen.
-    p.text-info
+    p.text-light
         | The Lsystem class here contains a collection (vector) of Rule classes. A rule class has an “in” character (the left-hand side of the production) an “out” string (the right side), and a function pointer to define the task to do. The latter here is especially important in the structure, and allows the user control of how the L-system can be structured. After these are done, the level of the lsystem to be generated can be done through key strokes (l and shift+l, in this program's case).
-    p.text-info
+    p.text-light
         | When it comes time to render shapes to the screen, all the lsystem has to do is iterate through the produced pattern and call the task assigned to its letter in the Rule class.
-    p.text-info
+    p.text-light
         | The Lsystem takes on a class member for a class known as a “ShapeManager”. This class manages a Shape (the model being rendered) and its transformations throughout space. The job of this class is to keep track of and make it easy to transform the shape, without worrying about the order of the transformations. The class also keeps track of the Blinn-Phong material being used in addition to the actual shape. This makes is very easy to change out the shading and shape used for the rendering.
     .span12
         hr
-    h2.text-info Performance
-    p.text-info
+    h2.text-light Performance
+    p.text-light
         | Unfortunately, the current system of producing and rendering shapes is very expensive here. Note that these L-systems grow at an exponential pace (as is the nature of life and fractals). Thus, the computer will quickly find it taxing as it renders thousands of shapes at once on higher levels, quickly binging the number of frames per second down to a crawl.
     hr
     br

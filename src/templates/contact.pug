@@ -1,18 +1,19 @@
 extends partials/content.pug
 
 block content
-    h1.text-xs-center.text-info.m-y-3 Contact, Connect, or Collaborate!
-    .col-lg-4.col-md-6.text-xs-center
-        img(src="assets/images/Mail.png").m-y-1
-        h3.text-info Email
-        p.text-info LeJonMcGowan@gmail.com
-    .col-lg-4.col-md-6.text-xs-center
-        a(href="https://github.com/lejonmcgowan")
-            img(src="assets/images/Github.png").m-y-1
-        a(href="https://github.com/lejonmcgowan")
-            h3.text-info Github
-    .col-lg-4.col-md-6.text-xs-center
-        a(href="https://www.linkedin.com/in/lejon-mcgowan-b0518998")
-            img(src="assets/images/LinkedIN.png").m-y-1
-        a(href="https://www.linkedin.com/in/lejon-mcgowan-b0518998")
-            h3.text-info LinkedIn
+    h2.text-center.text-white.my-2 Contact, Connect, or Collaborate!
+    .row.my-2.justify-content-center
+        .col-sm
+            img(src="assets/images/Mail.png").d-block.mx-auto.my-1
+            h3.text-white.text-center Email
+            p.text-white.text-center LeJonMcGowan@gmail.com
+        .col-sm
+            a(href="https://github.com/lejonmcgowan")
+                .col-sm            
+                    img(src="assets/images/Github.png").d-block.mx-auto.my-1
+                    h3.text-white.text-center Github
+        .col-sm
+            a(href="https://www.linkedin.com/in/lejon-mcgowan-b0518998")
+                .col-sm            
+                    img(src="assets/images/LinkedIN.png").d-block.mx-auto.my-1
+                    h3.text-white.text-center LinkedIn

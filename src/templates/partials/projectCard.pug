@@ -1,16 +1,9 @@
 //Created by lejonmcgowan on 9/21/16.
 
 - var url = project.link
-    .col-lg-4.col-md-6
-        .card.card-inverse
-            a.thumb-cover.hidden-sm-down(href=url)
-            .thumbnail
-                a(href=url)
-                    img.img-fluid(src=project.imagePath)
-                    .hover-card-overlay.hidden-sm-down
-                        a.link-color-disable(href=url) 
-                            p.text-light #{project.description}
-            a.link-color-disable(href=url)
-                .card-block
-                    h3.text-xs-center #{project.title}
-                    p.text-xs-center.hidden-md-up #{project.description}
+    .card.d-block.mx-atuo.m-3.bg-dark(style="max-width:400px")
+        a(href=url)
+            img.card-img-top(src=project.imagePath)
+            .card-body
+                h3.text-white.text-center.card-title #{project.title}
+                p.text-white.text-center.card-text #{project.description}
