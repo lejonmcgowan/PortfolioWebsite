@@ -43,15 +43,12 @@ gulp.task('pug:templates', function() {
         var blob = {};
         //get all datafiles
 		var files = fs.readdirSync('src/data');
-        console.log(files);
         //take out the '.json' part to get the pure name
         files = files.map(file => file.slice(0,file.indexOf('.')));
         //assossiate each filename with the relevant JSON file
         files.forEach(function(file) {
              blob[file] = require('./src/data/' + file + '.json');
-            });
-        
-        console.log(blob);
+            });        
         return blob; 
 	}))
   .pipe(pug({
@@ -64,23 +61,27 @@ gulp.task('pug:templates', function() {
 gulp.task('serve',['sass'],function()
 {
 	browserSync.init({
-		server: "./src"
+		server: "./docs"
 	});
 
 	gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'],['sass']);
-	gulp.watch("src/*.html").on('change',browserSync.reload);
-	gulp.watch("src/css/*.css").on('change',browserSync.reload);
-	gulp.watch("src/js/*.js").on('change',browserSync.reload);
-	gulp.watch("src/templates/**/*.pug").on('change',function()
-	{
-		gulp.start(['pug:index','pug:templates']);
-		browserSync.reload;
-	});
-    gulp.watch("src/data/*.json").on('change',function()
+	gulp.watch("src/css/*.css").on('change',function(event)
     {
-        gulp.start(['pug:index','pug:templates']);
-        browserSync.reload;
+        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        gulp.start('css');
+        browserSync.reload('*/docs.html');
     });
+	gulp.watch("src/js/*.js").on('change',function(file)
+    {
+        gulp.start('js');
+        browserSync.reload('*/docs.html');
+    });
+	gulp.watch(['src/templates/**/*',"src/data/*.json"]).on('change',function(file)
+	{
+        console.log("reloading PUG");
+		gulp.start(['pug:index','pug:templates']);
+		browserSync.reload('*/docs.html');
+	});
 });
 
 gulp.task('fonts',function()
@@ -108,4 +109,4 @@ gulp.task('css',function()
     .pipe(gulp.dest('docs/css'));
 });
 
-gulp.task('default',['sass','css','pug:index','pug:templates','js','serve','fonts','fonts-css','assets']);
+gulp.task('default',['sass','css','pug:index','pug:templates','js','fonts','fonts-css','assets','serve']);
