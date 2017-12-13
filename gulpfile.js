@@ -102,4 +102,10 @@ gulp.task('fonts-css',function()
 	.pipe(gulp.dest('docs/css'));
 });
 
-gulp.task('default',['sass','pug:index','pug:templates','js','serve','fonts','fonts-css','assets']);
+gulp.task('css',function() 
+{
+    return gulp.src('src/css/*.css')
+    .pipe(gulp.dest('docs/css'));
+});
+
+gulp.task('default',['sass','css','pug:index','pug:templates','js','serve','fonts','fonts-css','assets']);
