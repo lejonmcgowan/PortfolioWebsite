@@ -8,7 +8,7 @@ var fs = require('file-system');
 gulp.task('sass',function() {
 	return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'])
 	.pipe(sass())
-	.pipe(gulp.dest("src/css"))
+	.pipe(gulp.dest("docs/css"))
 	.pipe(browserSync.stream());
 });
 
